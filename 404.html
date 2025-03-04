@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
-<script>
-window.location.replace("http://store.virovek.com");
-</script>
 </head>
+
 <body>
-  You will be redirected to your destination shortly.
+  <!-- <p>Hi there! The Virovek online store has moved to <a href="https://store.virovek.com">store.virovek.com.</a></p>
+  <p>Paths are the same, so you can just replace the word "premade" with the word "store" in your address bar, and you
+    should arrive at your intended destination.</p>
+  <p>Alternatively, you can just wait, and be redirected to your destination in <span style="color: red">ten
+      seconds</span>.</p>
+  <p>Alternatively alternatively, you can click <a id="thislink" href="">this link</a>.</p> -->
 </body>
+
+<script defer>
+  const pathname = window.location.pathname
+  // const thisLink = document.getElementById("thislink")
+  // thisLink.setAttribute("href", `http://store.virovek.com/${pathname}`)
+  setTimeout(() => window.location.replace(`http://store.virovek.com${pathname}`), 100)
+</script>
+
 </html>
